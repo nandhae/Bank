@@ -13,21 +13,22 @@ public class Manager {
 
         System.out.println("Enter the num of customers you want to create!!!");
         noOfCus= scanner.nextInt();
-
+        int temp;
         for (int i=0;i< noOfCus;i++){
             customers[i].id=i;
             System.out.println("Enter the name of the customer!!");
             customers[i].name = scanner.nextLine();
             customers[i].name = scanner.nextLine();
-
+        do{
             System.out.println("Enter the amount you want to put as initial deposit!!");
-            int temp=scanner.nextInt();
+            temp=scanner.nextInt();
             if(temp <500 ){
                 System.out.println("Initial deposit can not be less than 500!!!");
             }
             else {
                 customers[i].account.balance = temp;
             }
+        }while (temp<500);
         }
 
     }
@@ -49,6 +50,8 @@ public class Manager {
                     break;
                 default:
                     break;
+
+
             }
 
     }
